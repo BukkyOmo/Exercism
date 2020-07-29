@@ -7,9 +7,9 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 class TwoFer
-    def self.two_fer(first = "you")
-        "One for #{first}, one for me."
-    end
+  def self.two_fer(first = "you")
+    "One for #{first}, one for me."
+  end
 end
 
 puts TwoFer.two_fer("Alice")
