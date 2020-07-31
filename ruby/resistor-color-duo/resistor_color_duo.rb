@@ -1,9 +1,8 @@
 class ResistorColorDuo
-  @@colors = ['black', 'brown', 'red', 'orange', 'yellow', 'green', 'blue', 'violet', 'grey', 'white']
+  COLORS = ['black', 'brown', 'red', 'orange', 'yellow', 'green', 'blue', 'violet', 'grey', 'white'].freeze
 
   def self.value(array)
-    "#{@@colors.find_index(array[0])}#{@@colors.find_index(array[1])}".to_i
+    array.first(2).map { |color| COLORS.find_index(color) }.join.to_i
   end
 end
 
-puts ResistorColorDuo.value(["blue", "grey"])
